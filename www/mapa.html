@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<!-- API DE MAPA -->
+	<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+
+	<script src="components/loader.js">
+
+	</script>
+	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="css/mapa.css">
+
+</head>
+
+<body>
+	<div class="container">
+		<img class="logoColorida" src="img/logoColorida.svg" alt="">
+		<div class="title">
+			<h4>PONTOS</h4>
+			<h3>TURÍSTICOS</h3>
+			<div class="background">
+			</div>
+
+		</div>
+		<!-- CLASSIFICAÇÃO DOS LOCAIS -->
+		<div class="menuLocais">
+			<div class="item">
+				<img src="img/menuRestaurante.svg" alt="">
+				<p>Alimentos</p>
+			</div>
+
+			<div class="item">
+				<img src="img/menuLazer.svg" alt="">
+				<p>Lazer</p>
+			</div>
+			<div class="item">
+				<img src="img/menuPontos.svg" alt="">
+				<p>Ponto de troca</p>
+			</div>
+			<div class="item">
+				<img src="img/menuEstadia.svg" alt="">
+				<p>Estadia</p>
+			</div>
+		</div>
+
+		<!-- API DO MAPA -->
+		<div id="map" class="frame">
+		</div>
+
+		<!-- MENU MARAVILHOSO -->
+		<div class="menuFixo">
+			<div onclick="redirectMapa()" class="mapa" id="mapa">
+				<img src="img/iconMapa.svg" alt="">
+			</div>
+			<div onclick="redirectTroca()" class="coleta">
+				<img src="img/iconColeta.svg" alt="">
+			</div>
+			<div onclick="ganhaPonto()" class="code">
+				<img src="img/iconCode.svg" alt="">
+			</div>
+			<div onclick="redirectPerfil()" class="user">
+				<img src="img/iconUser.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<script src="components/global.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+    L.mapquest.key = 'uusZsdWV0By0S7Nf0N6nxfVvPJAJGdrA';
+    L.mapquest.map('map', {
+      center: [-24.122187948908884, -46.678684651851654],
+      layers: L.mapquest.tileLayer('map'),
+      zoom: 15,
+    });
+  }
+	</script>
+</body>
+</html>

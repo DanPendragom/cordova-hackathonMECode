@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="components/loader.css">
 
 	<link rel="stylesheet" href="css/user.css">
-
 </head>
 
 <body>
@@ -18,7 +17,7 @@
 			<div class="pontos">
 				<img src="img/logoCapa.svg" alt="">
 				<p>pontos</p>
-				<h1>1000</h1>
+				<h1 id="pontos">40</h1>
 			</div>
 			<div class="profile">
 				<img src="img/profile.jpg" alt="">
@@ -33,16 +32,16 @@
 				<h3>Histórico de pontos</h3>
 				<div class="listaLocais">
 					<!-- LOCAL 1 -->
-					<div class="local">
+					<div id="local1"class="local">
 						<div class="imgLocal">
-							<img src="img/local1.jpg" alt="">
+							<img src="img/local3.jpg" alt="">
 						</div>
 						<div class="dados">
-							<h4> MUSEU D... </h4>
-							<p> + 15 PONTOS</p>
+							<h4> ETEC AD... </h4>
+							<p> + 50 PONTOS</p>
 						</div>
 						<div class="data">
-							<p>20/10/19</p>
+							<p>20/09/19</p>
 						</div>
 					</div>
 					<!-- LOCAL 2 -->
@@ -52,10 +51,10 @@
 						</div>
 						<div class="dados">
 							<h4> MUSEU D... </h4>
-							<p> + 15 PONTOS</p>
+							<p> + 10 PONTOS</p>
 						</div>
 						<div class="data">
-							<p>20/10/19</p>
+							<p>18/09/19</p>
 						</div>
 					</div>
 					<!-- LOCAL 3 -->
@@ -68,7 +67,7 @@
 							<p> + 15 PONTOS</p>
 						</div>
 						<div class="data">
-							<p>20/10/19</p>
+							<p>18/09/19</p>
 						</div>
 					</div>
 					<!-- LOCAL 4 -->
@@ -81,26 +80,28 @@
 							<p> + 15 PONTOS</p>
 						</div>
 						<div class="data">
-							<p>20/10/19</p>
+							<p>16/09/19</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
+    <!-- MENU MARAVILHOSO -->
 		<div class="menuFixo">
+			<div onclick="redirectMapa()" class="mapa" id="mapa">
+				<img src="img/iconMapa.svg" alt="">
+			</div>
+			<div onclick="redirectTroca()"class="coleta">
+				<img src="img/iconColeta.svg" alt="">
+			</div>
+			<div onclick="ganhaPonto()" class="code">
+				<img src="img/iconCode.svg" alt="">
+			</div>
 			<div class="user">
 				<img src="img/iconUser.svg" alt="">
 			</div>
-			<div class="code">
-				<img src="img/iconCode.svg" alt="">
-			</div>
-			<div class="coleta">
-				<img src="img/iconColeta.svg" alt="">
-			</div>
 		</div>
 	</div>
-
+	<script src="components/global.js"></script>
 </body>
-
 </html>
